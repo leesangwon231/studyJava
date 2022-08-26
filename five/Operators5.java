@@ -1,6 +1,7 @@
+package five;
 public class Operators5 {
     public static void main(String[] args) {
-        Operators5 sample = new Operators5();
+        //Operators5 sample = new Operators5();
         //sample.additive();
         //sample.remainder();
         //sample.plusParami(1, 2);
