@@ -21,7 +21,10 @@ public class Doit7 {
             printAverage(classNo);
         }
     
-
+    /**
+     * 해당 반의 평균 점수를 구하는 함수
+     * @param classNo 반번호
+     */
     public void printAverage(int classNo){
         Double classAverage = 0.0;
         for (int i = 0; i < setData()[classNo].length; i++) {
