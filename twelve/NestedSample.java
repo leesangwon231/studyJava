@@ -1,6 +1,5 @@
 package twelve;
 
-import twelve.OuerOfStatic.StaticNested;
 
 public class NestedSample {
     
