@@ -2,12 +2,10 @@ package bakjun;
 
 import java.util.Scanner;
 
-public class Ten {
+public class Fourty {
     public static void main(String[] args) {
-        int n;
         Scanner scanner = new Scanner(System.in);
-        n = scanner.nextInt();
-        System.out.println("입력한 정수 =>" + n);
+        System.out.println(0-scanner.nextInt()); 
         scanner.close();
     }
 }
