@@ -3,6 +3,7 @@ package bakjun;
 import java.util.Scanner;
 
 public class EightyFive {
+   
     public int makeSound(String soundSize){
         String array[] = soundSize.split(" ");
         int size = 1;
