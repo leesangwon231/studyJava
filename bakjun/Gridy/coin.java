@@ -12,7 +12,7 @@ int countCoin = 0; // 동전의 최소 갯수
 public void setNK(String setNums){
     String array[] = setNums.split(" ");
     this.n = Integer.parseInt(array[0])-1;
-    this.k = Integer.parseInt(array[0]);
+    this.k = Integer.parseInt(array[1]);
     this.coinValue = new int[k]; 
 }
 
@@ -22,10 +22,11 @@ public void setCoinValues(int value){
 }
 
 public void countLowCoin(){
-    for (int i = 9; i >= 0; i--) {
+    for (int i = 0; i <= 9; i++) {
         if (coinValue[i] <= k) {
             k -= coinValue[i];
             countCoin++;
+            break;
         } 
     }
 }
