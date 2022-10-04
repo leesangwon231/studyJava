@@ -13,42 +13,26 @@ public class Gasolin {
         String[] cityGasolin = scanner.nextLine().split(" "); //4
 
         int sum = 0;
+        int compareGasolin = Integer.parseInt(cityGasolin[0]);
         for (int i = 0; i < cityKm.length; i++) {
-            int a =0;
-           
-            if(i>0){
-                for (int j = 0; j < i; j++) {
-                    a += Integer.parseInt(cityKm[i-1])*Integer.parseInt(cityGasolin[i-1]);
-                }
-                
+            if(Integer.parseInt(cityGasolin[i])<compareGasolin){
+                compareGasolin = Integer.parseInt(cityGasolin[i]);
             }
-            int km = 0;
-            for (int j = i; j < cityKm.length; j++) {
-                km += Integer.parseInt(cityKm[j]);
-            }
-            
-            a += (Integer.parseInt(cityGasolin[i])*km);
-            System.out.println(i+"번째 값"+a);
-            System.out.println(i+"번째 km"+km);
-
-            if (sum == 0) {
-                sum = a;
-            }else{
-                if (a<sum) {
-                    sum = a;
-                }
-            }
-            
-                
+            sum += Integer.parseInt(cityKm[i]) * compareGasolin;
         }
+
+
+
         System.out.println(sum);
         scanner.close();
+    }
 
         
-    }
+  
 
     public static void main(String[] args) {
         Gasolin g = new Gasolin();
         g.coinValue();
     }
+
 }
