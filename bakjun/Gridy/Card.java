@@ -62,7 +62,7 @@ public class Card {
             }
         }
        
-        System.out.println(a.get(0)+a.get(1));
+        
         scanner.close();
     }
 
