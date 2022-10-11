@@ -1,6 +1,5 @@
 package bakjun.Gridy;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AtoB16953 {
@@ -11,54 +10,40 @@ public class AtoB16953 {
 
         String array[] = scanner.nextLine().split(" ");
 
-        int result = Integer.parseInt(array[1]);
+        long result = Long.parseLong(array[1]);
 
-        int start = Integer.parseInt(array[0]);
-
-        int b = start;
+        long start = Long.parseLong(array[0]);
         
-        // 8 1  2  10 1   1 10 0
-        while(true){
-            count ++; //100
-            System.out.println(b);
-            
-          if(b>result){
-            return -1;
-            
-          }
-          if(b==result){
-            break;
-          }else{
-            b *= 2; //200
-            System.out.println(b);
-            if(b>result){
-                return -1;
-            }
-            count ++;
-           
-           
+      
+        count++;
 
-           b *= 10;
-           b += 1; //2001
-           System.out.println(b);
-           if(b>result){
-            return -1;
-           }
-
-           
-           if(b == result){
-                count ++;
+        while (true) { // 162 81 8 4 2 
+            if(result == start){
                 break;
-           }
+            } 
+            if(result < start){
+                scanner.close();
+                count = -1;
+                break;                
+            } // 40021 
+    
+                if(result %2 == 0){ // 15 -> 14 
+                    result /= 2;
+                }else{
+                    result -= 1;
+                    if(result%10 != 0){
+                        scanner.close();
+                        count = -1;
+                         break;
+                    }else{ 
+                        result /= 10;
+                    }
+                    
+                }
+                count ++;
             
-          }
-          
-          
-
-
-
         }
-
+        scanner.close();
         return count;
 
     }
