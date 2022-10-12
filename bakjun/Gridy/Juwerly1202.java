@@ -34,26 +34,19 @@ public class Juwerly1202 {
         for (int j = 0; j < Integer.parseInt(jwerlyAndBag[1]); j++) {
             bag[j] = scanner.nextInt();
         }
-        /* 
-        for (int i = 0; i < jwerlyPriceAndWeight.length; i++) {
-            for (int j = 0; j < 2; j++) {
-                System.out.println(jwerlyPriceAndWeight[i][j]);
-            }
-        }
-       */
-        Arrays.sort(bag,Comparator.reverseOrder());
-       
+
+        scanner.nextLine();
         int sum = 0;
-        int index = 0;
+
         for (int i = 0; i < bag.length; i++) {
-            
-            for (int j = index; j < jwerlyPriceAndWeight.length; j++) {
-               
-                
+            for (int j = 0; j < jwerlyPriceAndWeight.length; j++) {
+                if(jwerlyPriceAndWeight[j][0].equals("-1")){
+                    continue;
+                }
                 if(bag[i]>=Integer.parseInt(jwerlyPriceAndWeight[j][0])){
                     sum +=  Integer.parseInt(jwerlyPriceAndWeight[j][1]);
-                    index = j+1;    
-                    System.out.println(Integer.parseInt(jwerlyPriceAndWeight[j][1]));                
+                    jwerlyPriceAndWeight[j][0] = "-1";
+                  
                     break;
                 }
             }
