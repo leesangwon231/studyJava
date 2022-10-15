@@ -1,12 +1,12 @@
 package JavaSin2.Jeneric;
 
-public class WildCardGeneric<w> {
+public class WildCardGeneric<W> {
 
-    w wildcard;
+    W wildcard;
 
-    public void setWildcard(w wildcard){
+    public void setWildcard(W wildcard){
 
-        this.wildcard;
+        this.wildcard = wildcard;
     }
 
     public w getWildcard(){

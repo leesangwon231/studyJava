@@ -12,10 +12,14 @@ public class WildCardSample {
         wildcardStringMethod(wildCard);
     }
 
-    public void wildcardStringMethod(WildCardGeneric<String> c){
-        String value = c.getWildcard();
-        System.out.println(value);
+    public void wildcardStringMethod(WildCardGeneric<?> c){
+        Object value = c.getWildcard();
+        if(value instanceof String){
+            System.out.println(value);
+        }
     }
+
+    
 
 
 }
