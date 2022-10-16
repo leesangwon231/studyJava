@@ -32,7 +32,7 @@ public class ComparableVScomparator{
         int max = players.get(0).getScore();
         
         for (ComparableVScomparator player : players) {
-            if(){
+            if(player){
                 max = player.getScore();
             }
         }
